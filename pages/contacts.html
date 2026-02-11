@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Обратная связь — ToDoMini</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">ToDoMini</div>
+
+      <nav class="main-nav">
+        <button class="menu-toggle" aria-label="Открыть меню" aria-expanded="false">
+          <span class="hamburger"></span>
+        </button>
+
+        <ul class="nav-list">
+          <li><a href="../index.html">Задачи</a></li>
+          <li><a href="stats.html">Статистика</a></li>
+          <li><a href="about.html">О проекте</a></li>
+          <li><a href="contacts.html" class="active">Обратная связь</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <h1>Напиши нам</h1>
+
+      <form id="contactForm" class="task-form feedback-form">
+        <input type="text" id="name" placeholder="Ваше имя" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <textarea id="message" rows="5" placeholder="Сообщение" required></textarea>
+        
+        <label class="checkbox-label">
+          <input type="checkbox" id="agree" required>
+          <span>Согласен на обработку персональных данных</span>
+        </label>
+
+        <button type="submit">Отправить</button>
+      </form>
+
+      <p id="formResult" class="form-result"></p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Итоговый проект by Adilka  HTML / CSS / JavaScript 2026</p>
+    </div>
+  </footer>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>

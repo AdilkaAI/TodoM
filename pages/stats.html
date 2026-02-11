@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Статистика  ToDoMini</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">ToDoMini</div>
+
+      <nav class="main-nav">
+        <button class="menu-toggle" aria-label="Открыть меню" aria-expanded="false">
+          <span class="hamburger"></span>
+        </button>
+
+        <ul class="nav-list">
+          <li><a href="../index.html">Задачи</a></li>
+          <li><a href="stats.html" class="active">Статистика</a></li>
+          <li><a href="about.html">О проекте</a></li>
+          <li><a href="contacts.html">Обратная связь</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <h1>Статистика задач</h1>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-number" id="totalTasks">0</div>
+          <div class="stat-label">Всего задач</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" id="completedTasks">0</div>
+          <div class="stat-label">Выполнено</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" id="pendingTasks">0</div>
+          <div class="stat-label">В работе</div>
+        </div>
+        <div class="stat-card progress-card">
+          <div class="progress-circle" id="progressCircle">
+            <span id="progressText">0%</span>
+          </div>
+          <div class="stat-label">Прогресс</div>
+        </div>
+      </div>
+
+      <div class="priorities-card stat-card">
+        <h3>По приоритету</h3>
+        <div class="priority-bars">
+          <div class="priority-item">
+            <span class="priority-label high">Высокий</span>
+            <div class="bar"><div class="bar-fill high" id="highBar"></div></div>
+            <span id="highCount">0</span>
+          </div>
+          <div class="priority-item">
+            <span class="priority-label mid">Средний</span>
+            <div class="bar"><div class="bar-fill mid" id="midBar"></div></div>
+            <span id="midCount">0</span>
+          </div>
+          <div class="priority-item">
+            <span class="priority-label low">Низкий</span>
+            <div class="bar"><div class="bar-fill low" id="lowBar"></div></div>
+            <span id="lowCount">0</span>
+          </div>
+        </div>
+      </div>
+
+      <h2>Последние задачи</h2>
+      <ul id="recentTasks" class="tasks-list"></ul>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Итоговый проект by Adilka  HTML / CSS / JavaScript  2026</p>
+    </div>
+  </footer>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>

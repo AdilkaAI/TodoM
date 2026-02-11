@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ToDoMini Планировщик задач</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+ 
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">ToDoMini</div>
+
+      <nav class="main-nav">
+        
+        <button class="menu-toggle" aria-label="Открыть меню" aria-expanded="false">
+          <span class="hamburger"></span>
+        </button>
+
+       
+        <ul class="nav-list">
+          <li><a href="index.html" class="active">Задачи</a></li>
+          <li><a href="pages/stats.html">Статистика</a></li>
+          <li><a href="pages/about.html">О проекте</a></li>
+          <li><a href="pages/contacts.html">Обратная связь</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  
+  <main>
+    <div class="container">
+      <h1>Мои задачи</h1>
+
+     
+      <form id="taskForm" class="task-form">
+        <input 
+          type="text" 
+          id="taskInput" 
+          placeholder="Что нужно сделать?" 
+          required 
+          autocomplete="off"
+        >
+        
+        <div class="priority-group">
+          <label class="priority-label low">
+            <input type="radio" name="priority" value="low" required>
+            <span>Низкий</span>
+          </label>
+          <label class="priority-label mid">
+            <input type="radio" name="priority" value="mid">
+            <span>Средний</span>
+          </label>
+          <label class="priority-label high">
+            <input type="radio" name="priority" value="high">
+            <span>Высокий</span>
+          </label>
+        </div>
+
+        <button type="submit">Добавить</button>
+      </form>
+
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">Все</button>
+        <button class="filter-btn" data-filter="active">Активные</button>
+        <button class="filter-btn" data-filter="completed">Выполненные</button>
+      </div>
+
+      
+      <div class="stats-row">
+        Всего: <strong id="totalCount">0</strong> • 
+        Выполнено: <strong id="completedCount">0</strong>
+      </div>
+
+      
+      <ul class="tasks-list" id="tasksList"></ul>
+    </div>
+  </main>
+
+  
+  <footer>
+    <div class="container">
+      <p>Итоговый проект by Adilka  HTML / CSS / JavaScript 2026</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
