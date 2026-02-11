@@ -228,9 +228,9 @@
   transition: width 0.4s ease;
 }
 
-.bar-fill.high { background: #ef4444; }
+.bar-fill.high { background: #ff0000; }
 .bar-fill.mid  { background: #f59e0b; }
-.bar-fill.low  { background: #10b981; }
+.bar-fill.low  { background: #00ffaa; }
 
 .priority-count {
   font-weight: 700;
@@ -375,4 +375,49 @@
   text-align: center;
   margin-top: 3rem;
   font-size: 1.1rem;
+}
+
+
+.input-group {
+  position: relative;
+  margin-bottom: 1.25rem;
+}
+
+
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 0.9rem 1.25rem 0.9rem 3.2rem; 
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 1.05rem;
+  transition: border-color 0.2s;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+  border-color: var(--primary);
+  outline: none;
+}
+
+.input-group textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+
+.task-form button {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.1rem;
+}
+
+
+.form-result {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border-radius: 10px;
+  font-weight: 500;
+  min-height: 1.2em;
 }
