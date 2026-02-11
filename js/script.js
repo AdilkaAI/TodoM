@@ -94,7 +94,28 @@ document.addEventListener('DOMContentLoaded', () => {
  
     renderTasks();
   }
+    function renderTasks(filter = 'all') {
+  const list = document.getElementById('tasksList');
+  if (!list) return;
 
+  list.innerHTML = '';
+
+  let filtered = [];
+  for (let i = 0; i < tasks.length; i++) {
+    const task = tasks[i];
+    if (filter === 'all' ||
+        (filter === 'active' && !task.done) ||
+        (filter === 'completed' && task.done)) {
+      filtered.push(task);
+    }
+  }
+
+  filtered.forEach(task => {
+    
+  });
+
+  updateStats();
+}
   
   const totalTasksEl = document.getElementById('totalTasks');
   if (totalTasksEl) {
